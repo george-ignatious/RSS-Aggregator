@@ -26,10 +26,18 @@ div#name {}
 div.name {}
 div {}
 span {}
-
+.wrapper{background-color: #eeeeee;}
 /* -- TEXT -- */
+.header{border:groove;
+	background-color: white;
+	margin-top:6px;
+	padding-bottom: 5px;
+	padding-top: 1px;
+}
+h1 {color: lightblue;
+text-align: center;
 
-h1 {color: black;text-align: center;text-shadow: 1px 1px 1px black;}
+text-shadow: 1px 1px 1px lightblue;}
 h2 {}
 h3 {}
 h4 {}
@@ -205,7 +213,16 @@ noframes {}
 
 .vert-align { vertical-align: middle; }
 .center { text-align: center; }
-
+.sec {background-color:white;
+border:groove;
+	margin-right:1px;
+margin-left:15px;
+margin-bottom:5px;
+margin-top:5px;
+	height:95%;
+	padding: 5px 5px 5px 5px;
+}
+.arjun{height: 300px;}
 .clear {
 	display: block;
 	clear: both;

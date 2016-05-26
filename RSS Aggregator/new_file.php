@@ -1,6 +1,8 @@
 <head></head>
 <link rel="stylesheet" type="text/css" href="new_file.css">
-</head><body>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head><body><div class="container-fluid wrapper">
+<div class="header"><h1>RSS Feed Aggregator</h1></div>
 <?php
     $rss = new DOMDocument();
 	$sites =  file('sites.txt');
@@ -22,21 +24,37 @@
 	}}}
 	
         krsort( $feed );
-    echo '<h1>RSS Feed Aggregator</h1>';
+		$feed=array_values($feed);
+    
     $limit = 200;
-    foreach( $feed as $post ) {
+	 ?>
+	 <hr>
+	 <?php
+    for( $i = 1; $i <= sizeof($feed); $i=$i+3 ) {
+    	echo '<div class="row arjun">';
+		echo '<div class="col-md-1"></div>';
+    	for( $j = $i; $j <=$i+ 2&&$j<sizeof($feed); $j=$j+1 ){
+    	$post=$feed[$j];
         $title = str_replace(' & ', ' &amp; ', $post['title']);
         $link = $post['link'];
         $description = $post['desc'];
-        $date = $post['date'];
-        
- echo '<h5>';
+        $date = $post['date'];?>
+      <div class='sec col-md-3'>
+
+ 	<?php
         echo '<p><strong><a href="'.$link.'" title="'.$title.'">'.$title.'</a></strong><br />';
         echo '<small><em>Posted on '.$date.'</em></small></p>';
         echo '<p>'.$description.'</p>';
 		echo '</br></br></br>';
-		 echo '</h5>';
-       
+		 
+?>
 
+
+       </div>
+       <?php
+		}echo '<div class="col-md-1"></div>';?>
+		</div>
+		<?php
     }
-?></body> </html>
+?></div>
+</body> </html>
