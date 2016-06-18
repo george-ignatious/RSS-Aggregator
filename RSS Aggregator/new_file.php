@@ -8,8 +8,8 @@
 	$variable = $_GET["var"];
 	$sites =  parse_ini_file("rss.ini");
 	$feed = array();
-$ssite=$sites[$variable];
-
+$site=$sites[$variable];
+foreach ($site as $ssite) {
 	
 
 	$rss->load($ssite);
@@ -25,7 +25,7 @@ $ssite=$sites[$variable];
             
             );
 	
-	}}
+	}}}
 	
         krsort( $feed );
 		$feed=array_values($feed);
