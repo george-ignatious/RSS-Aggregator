@@ -5,10 +5,14 @@
 <div class="header"><h1>RSS Feed Aggregator</h1></div>
 <?php
     $rss = new DOMDocument();
-	$sites =  file('sites.txt');
+	$variable = $_GET["var"];
+	$sites =  parse_ini_file("rss.ini");
 	$feed = array();
-	foreach( $sites as $site ) {
-	$rss->load($site);
+$ssite=$sites[$variable];
+
+	
+
+	$rss->load($ssite);
     $files[0]=$rss;
     
 	foreach( $files as $file ) {
@@ -21,7 +25,7 @@
             
             );
 	
-	}}}
+	}}
 	
         krsort( $feed );
 		$feed=array_values($feed);

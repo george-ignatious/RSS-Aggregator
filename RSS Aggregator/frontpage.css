@@ -1,0 +1,61 @@
+body {
+    
+ background-size:cover;
+	
+}
+.center {
+	
+	 text-align: center; }
+	 .left {
+	
+	 text-align: left; }
+	 
+
+a:hover {
+
+text-transform: uppercase;
+text-decoration: none;
+}
+.grow { 
+font: bold 24px/45px Helvetica, Sans-Serif; 
+    text-decoration: none;
+}
+.grow:link, .grow:visited {font-size: 250%;
+
+   color:white;font: bold 24px/45px Helvetica, Sans-Serif; 
+}
+.grow1 { 
+font: bold 24px/45px Helvetica, Sans-Serif; 
+    text-decoration: none;
+}
+.grow1:link, .grow1:visited {
+   color:#7733ff;
+}
+h1{
+	position: absolute; 
+   width: 100%;
+}
+h2{font-size: 110%;
+
+	position: absolute; 
+   width: 100%;
+}
+h3{
+	position: absolute; 
+   width: 100%;
+}
+h4{
+	position: absolute; 
+   width: 100%;
+}
+h5{
+	position: absolute; 
+   width: 100%;
+}
+table {
+	background-image:url(logo.jpg); 
+}
+.img{
+	
+	background-image:url(logo.jpg);
+}
